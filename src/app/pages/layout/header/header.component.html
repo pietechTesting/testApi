@@ -1,0 +1,84 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    <img class="navlogo" src="assets/img/icon.jpg">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"
+          aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse row">
+    <div class="col-md-8">
+      <input class="form-control search" placeholder="search">
+      <i class="fa fa-search icon-search"></i>
+    </div>
+    <div class="col-md-1 text-center">
+      <i class="fa fa-shopping-cart icon-font"></i>
+    </div>
+    <div class="col-md-1 text-center">
+      <i class="fa fa-bell icon-font"></i>
+    </div>
+    <div *ngIf="loginBtn">
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        login
+      </button>
+    </div>
+    <div *ngIf="welcome">
+      Welcome: {{userDetails.name}}
+      <span class="dropdown show">
+        <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             <i class="fa fa-user"></i>
+        </a>
+
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item" href="#">Logout</a>
+          <a class="dropdown-item" href="#">Profile</a>
+        </div>
+      </span>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+         aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content" style="background-color:#007bff">
+          <div class="modal-header">
+            <label class="modal-title" id="exampleModalLabel">
+              Login
+            </label>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form [formGroup]="loginForm">
+              <div class="Form-Group">
+                <div class="row">
+                  <div class="col-md-4">
+                    <label>Email:</label>
+                  </div>
+                  <div class="col-md-8">
+                    <input class="Form-Control" type="email" name="email" formControlName="email" id="loginEmail">
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-4">
+                    <label>Password:</label>
+                  </div>
+                  <div class="col-md-8">
+                    <input class="Form-Control" type="password" name="password" formControlName="password"
+                           id="loginPassword">
+                  </div>
+                </div>
+                <div class="row">
+                  <a [routerLink]="'/clothing/forgetPassword'" style="color:#fff">Forget Password</a>
+                  <div class="col text-right">
+                    <button class="btn btn-success" type="button" [disabled]="!loginForm.valid" data-dismiss="modal" (click)="submitLogin()">Login</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

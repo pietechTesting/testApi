@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-md-8 offset-2">
+      <div class="card">
+        <button class="btn btn-success"></button>
+        <div class="card-body">
+          <div class="row">
+            <label>Title</label>
+            <input [(ngModel)]="productDetails.title"   type="text" class="form-control" id="title" required>
+          </div>
+          <div class="row">
+            <label>Short Description</label>
+            <input [(ngModel)]="productDetails.shortDescription"   type="text" class="form-control"  required>
+          </div>
+          <div class="row">
+            <label>Img</label>
+            <input type="file">
+            <img  src="{{productDetails.imageUrl}}" alt="Image" name="img">
+          </div>
+          <div class="row text-right">
+            <button class="btn btn-success" (click)="updateHere()">Update</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

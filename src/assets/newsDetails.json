@@ -1,0 +1,19 @@
+[
+  {
+    "imgPath": "assets/img/img1.jpg",
+    "title": "Economy",
+    "Category": "Business",
+    "shortDescription":"NEW DELHI: Some 31 suspected economic offenders have fled the country to avoid prosecution, the government has told the Lok Sabha."
+  },
+  {
+    "imgPath": "assets/img/img2.jpeg",
+    "title": "Cricket",
+    "Category": "Sports",
+    "shortDescription":"Former captain Ian Chappell had earlier said that Smith and Lehmann should shoulder blame for that sort of aggressive behaviour"
+  },
+  { "imgPath": "assets/img/img3.jpg",
+    "title": "Bollywood",
+    "Category": "Movies",
+    "shortDescription":"Bollywood News and Indian Movies news from India in various Indian languages including Hindi, Kannada, Tamil, Telugu and Gujarati."
+  }
+]

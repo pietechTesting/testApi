@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+.upload-btn{
+  width:100px;
+  height:50px;
+}
+.uploader{
+  position: relative;
+  color: white;
+}
+
+.uploader-inp{
+  position: absolute;
+  left:20px;
+  opacity: 0;
+}
+.uploaded-img{
+  width:100%;
+  height:200px ;
+}

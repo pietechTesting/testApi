@@ -1,0 +1,104 @@
+<div class="container">
+  <div class="row">
+    <div class="col text-right">
+      <button class="btn btn-lg btn-warning mt-4 mb-2" [routerLink]="'add'">Add Product</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4" *ngFor="let ctg of category;let index =i">
+      <div class="card mt-4 mb-4">
+        <img class="product-img" src='{{ctg.imageUrl}}' alt="Card image cap">
+        <div class="card-body">
+          <div class="card-text">
+            <div class="row">
+              <div class="col-6">
+                <h6>Title:</h6>
+              </div>
+              <div class="col-md-6">
+                {{ ctg.title}}
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6"><h6>Short Description:</h6></div>
+              <div class="col-md-6"> {{ctg.shortDescription}}</div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col text-right">
+            <button class="btn btn-info" (click)="onUpdate(ctg._id)"><i class="fa fa-pencil-square-o"></i></button>
+            <button class="btn btn-danger" (click)="onDelete(ctg._id, i)"><i class="fa fa-trash"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <ss-multiselect-dropdown [options]="myOptions" [(ngModel)]="optionsModel" (ngModelChange)="onChange($event)"></ss-multiselect-dropdown>
+    </div>
+  </div>
+  <br>
+  <br>
+  <br>
+</div>
+
+<!--card Ends-->
+<!--<ngx-masonry>-->
+<!--<ngx-masonry-item class="masonry-item" *ngFor="let item of masonryItems">-->
+<!--<div class="row">-->
+<!--<div class="col-md-4">-->
+<!--<img src="{{item.src}}">-->
+<!--{{item.title}}-->
+<!--{{item.date}}-->
+<!--</div>-->
+<!--</div>-->
+<!--</ngx-masonry-item>-->
+<!--</ngx-masonry>-->
+
+
+<div class="row">
+  <div class="col-md-6 offset-3">
+    <div class="login">
+      <div class="card text-white bg-secondary">
+        <div class="card-header">Resigter</div>
+        <div class="card-body">
+          <h5 class="card-title">
+            <label>Register</label>
+          </h5>
+          <p class="card-text">
+          <form [formGroup]="valForm" (ngSubmit)="onRegister()">
+            <div class="row">
+              <div class="col-md-4">
+                <label>Name:</label>
+              </div>
+              <div class="col-md-8">
+                <input class="Form-Control" type="text" name="name" formControlName="name" id="name">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <label>Email:</label>
+              </div>
+              <div class="col-md-8">
+                <input class="Form-Control" type="email" name="email" formControlName="email" id="email">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-4">
+                <label>Password:</label>
+              </div>
+              <div class="col-md-8">
+                <input class="Form-Control" type="password" name="password" formControlName="password" id="password">
+              </div>
+            </div>
+            <div class="row">
+              <button class="btn btn-lg btn-success" type="submit" [disabled]="!valForm.valid">Register</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
