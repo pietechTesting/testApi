@@ -10,8 +10,8 @@ export class ConstantService {
   };
 
   constructor() {
-    this.Login_Auth = 'http://192.168.1.12:5000/'; // 'https://Apiclothing.herokuapp.com/'; //
-    this.API_ENDPOINT = 'http://192.168.1.12:5000/api/';// 'https://Apiclothing.herokuapp.com/api/';//
+    this.Login_Auth = 'https://Apiclothing.herokuapp.com/'; // 'http://192.168.1.12:5000/';  //
+    this.API_ENDPOINT = 'https://Apiclothing.herokuapp.com/api/'; // 'http://192.168.1.12:5000/api/'; //
   }
 
 }
