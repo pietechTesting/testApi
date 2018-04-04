@@ -7,7 +7,6 @@ import {HttpClientModule} from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import {Ng2CloudinaryModule} from 'ng2-cloudinary';
 import {FileUploadModule} from 'ng2-file-upload';
-import {NgxMasonryModule} from 'ngx-masonry';
 import {ReactiveFormsModule} from '@angular/forms';
 import {AppComponent} from './app.component';
 import {LoginPageComponent} from './pages/login-page/login-page.component';
@@ -40,7 +39,6 @@ const appRoutes: Routes = [
     ForgetPasswordComponent,
   ],
   imports: [
-    NgxMasonryModule,
     BrowserModule,
     BrowserAnimationsModule,
     AngularFontAwesomeModule,
