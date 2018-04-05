@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "api_test_production": "newman run testApi/clothingApp.postman_collection.json",
+    "api_test_production": "newman run clothingApp.postman_collection.json",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build --prod",
